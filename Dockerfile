@@ -8,7 +8,8 @@ RUN apt-get update \
  && mv lampp /opt\
  && rm -rf download
 RUN sed -i 's/*_64)/*_69)/g' /opt/lampp/lampp \
- && echo "/opt/lampp/lampp startapache" > /opt/lampp/lampp/start \
- && echo "/opt/lampp/lampp startmysql" >> /opt/lampp/lampp/start \
- && echo "tail -f /opt/lampp/logs/error.log" >> /opt/lampp/lampp/start \
+ && echo "/opt/lampp/lampp startapache" > /opt/lampp/start \
+ && echo "/opt/lampp/lampp startmysql" >> /opt/lampp/start \
+ && echo "tail -f /opt/lampp/logs/error.log" >> /opt/lampp/start \
+ && chmod +X /opt/lampp/start
  CMD ["/opt/lampp/lampp"]
