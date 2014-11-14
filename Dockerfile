@@ -10,6 +10,6 @@ RUN apt-get update \
 RUN sed -i 's/*_64)/*_69)/g' /opt/lampp/lampp \
  && echo "/opt/lampp/lampp startapache" > /opt/lampp/start \
  && echo "/opt/lampp/lampp startmysql" >> /opt/lampp/start \
- && echo "tail -f /opt/lampp/logs/error.log" >> /opt/lampp/start \
+ && echo "tail -f /opt/lampp/logs/error_log" >> /opt/lampp/start \
  && chmod +x /opt/lampp/start
  CMD /opt/lampp/start
