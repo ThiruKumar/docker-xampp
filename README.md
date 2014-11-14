@@ -1,4 +1,4 @@
 docker-xampp
 ============
 
-Docker XAMPP
+Docker XAMPP 1.6.8a
