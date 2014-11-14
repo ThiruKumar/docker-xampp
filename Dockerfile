@@ -8,5 +8,5 @@ RUN apt-get update \
  && mv lampp /opt\
  && rm -rf download
 RUN sed -i 's/*_64)/*_69)/g' /opt/lampp/lampp \
-RUN sed -i 's/$0//opt/lampp/lampp/g' /opt/lampp/lampp \
+ && sed -i 's/$0//opt/lampp/lampp/g' /opt/lampp/lampp \
  && cat /opt/lampp/lampp
